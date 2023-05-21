@@ -1,0 +1,118 @@
+/**
+ * @name Discord 11
+ * @description Based in Windows 11 UI
+ * @author zuzumi#8097
+ * @authorId 403725623161257984
+ * @version 2.2
+ * @invite PsNtzGeHuW
+ * @donate https://www.paypal.me/hurtyoutube
+ * @website https:github.com/zuzumi-f
+ * @source https://github.com/zuzumi-f/Discord-11/blob/main/base.css
+*/
+
+/*------------------------------------------------------------
+   Theme Import change styles with base.css or base-old.css
+      you can't disable this, is the full theme dummy
+------------------------------------------------------------*/
+@import url(https://zuzumi-f.github.io/Discord-11/base.css);
+
+/*--------------------------------------------------------------
+                             Colors
+---------------------------------------------------------------*/
+/*---Change colors with Purple.css, Green.css or Red.css ⬇️⬇️---*/
+@import url(https://zuzumi-f.github.io/Discord-11/colors/Green.css);
+
+/*--------------------------------------------------------------
+Message bubble styles [If you don't want any place a /* in all]
+----------------------------------------------------------------*/
+/* Message Bubble in Left Side */
+@import url(https://zuzumi-f.github.io/Discord-11/messagebubbleleft.css);
+/* Default Message Bubble *//*
+@import url(https://zuzumi-f.github.io/Discord-11/messagebubble11.css);
+/* New Message Bubble *//*
+@import url(https://zuzumi-f.github.io/Discord-11/messagebubblenew.css);
+
+/*--------------------------------------------------------------
+                           Glass effect
+         [To see your desk put "none" in --wallpaper-is:
+                               and
+               enable Transparency in BD Settings]
+---------------------------------------------------------------*/
+/*--Yes you can enable/disable this--*//*
+@import url(https://zuzumi-f.github.io/Discord-11/glass-effect.css);
+
+:root {
+    --wallpaper-is: url(none);
+    --blur-size: 24px;
+    --opacity-thing: 0.6;
+}
+
+/*--------------------------------------------------------------
+                        Code Watermark
+            [This indicate what code are you using
+         replace "display" with "none" to disable it]
+---------------------------------------------------------------*/
+:root {
+    --watermark-code: none;
+}
+
+/*----------------------------------------------------
+                anything else down here
+------------------------------------------------------*/
+
+/* Unread Pill */
+#app-mount .guilds-2JjMmN [class*=pill] {
+    margin-top: 46px;
+    border-radius: 2px;
+    width: 3px !important;
+}
+
+/* Server Icon */
+#app-mount .wrapper-28eC3z foreignObject {
+    border-radius: 100%;
+}
+
+/* Custom Color Pallete */
+
+:root {
+    --windark1: #191919;
+    --windark2: #202020;
+    --windark3: #191919;
+    --windark4: #191919;
+}
+
+/* Wordmark */
+.wordmarkWindows-2dq6rw::after {
+    content: "🎮 Discord";
+    width: 80px;
+    font-weight: normal;
+}
+
+/* Search Results Fix */
+#app-mount .searchResultsWrap-5RVOkx {
+    top: 130px;
+}
+
+/* Horizontal Server List Fix */
+#app-mount .standardSidebarView-E9Pc3j {
+    border-radius: 0;
+    border-left: none;
+    width: 100%;
+    left: 0;
+    height: calc(100% - 50px);
+    top: unset;
+    bottom: 0;
+}
+
+/* Remove Border */
+.sidebar-1tnWFu {
+    border-right: none;
+}
+.membersWrap-3NUR2t {
+    border-left: none;
+}
+
+/* Server Banner Fix */
+[class="container-1-ERn5 clickable-vvKY2q hasBanner-2IrYih bannerVisible-Vkyg1I communityInfoVisible-3zc5_s"], [class="container-1-ERn5 clickable-vvKY2q selected-1GtAC5 hasBanner-2IrYih bannerVisible-Vkyg1I communityInfoVisible-3zc5_s"] {
+    height: 120px;    
+}

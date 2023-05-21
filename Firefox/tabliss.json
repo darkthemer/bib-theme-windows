@@ -1,0 +1,52 @@
+{
+    "data/7552216d-16ea-4211-806e-023a0e8c740b": { "name": "" },
+    "widget/default-time": null,
+    "widget/default-greeting": null,
+    "data/b8e6f514-e08a-49dc-b1f6-3e624a7a3a36": {
+        "messages": ["What would you like to browse right now?"]
+    },
+    "locale": "en",
+    "timeZone": null,
+    "widget/a53c651b-3d83-4af2-9ed0-1373bd4c69a1": {
+        "active": true,
+        "display": { "position": "middleCentre" },
+        "id": "a53c651b-3d83-4af2-9ed0-1373bd4c69a1",
+        "key": "widget/css",
+        "order": 0
+    },
+    "widget/b8e6f514-e08a-49dc-b1f6-3e624a7a3a36": {
+        "id": "b8e6f514-e08a-49dc-b1f6-3e624a7a3a36",
+        "key": "widget/message",
+        "active": true,
+        "display": {
+            "position": "middleCentre",
+            "fontSize": 12,
+            "fontWeight": 300,
+            "fontFamily": ""
+        },
+        "order": 2
+    },
+    "widget/7552216d-16ea-4211-806e-023a0e8c740b": {
+        "id": "7552216d-16ea-4211-806e-023a0e8c740b",
+        "key": "widget/greeting",
+        "active": true,
+        "display": {
+            "position": "middleCentre",
+            "fontWeight": 100,
+            "fontFamily": "",
+            "fontSize": 32
+        },
+        "order": 1
+    },
+    "data/a53c651b-3d83-4af2-9ed0-1373bd4c69a1": {
+        "input": ".credit, .Overlay {\n    display: none;\n}\n.Dashboard.dark {\n    color: #1bed75;\n}"
+    },
+    "data/cD6vHPnLsRot": { "colour": "#202020" },
+    "background": {
+        "id": "cD6vHPnLsRot",
+        "key": "background/colour",
+        "display": { "blur": 0, "luminosity": -0.2 }
+    },
+    "focus": true,
+    "version": 3
+}

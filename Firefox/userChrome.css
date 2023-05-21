@@ -1,0 +1,646 @@
+/*=============================================================================*
+ *                               ONELINE PROTON                                *
+ *                                                                             *
+ * description    : An oneline userChrome.css theme for Firefox, which aims to *
+ *                  keep the Proton experience.                                *
+ * compatibility  : Firefox 89+                                                *
+ * repository     : https://github.com/lr-tech/OnelineProton/                  *
+ *                                                                             *
+ * THANKS FOR USING MY USERCHROME! <3                                          *
+ *============================================================================*/
+
+/* S E T T I N G S */
+
+:root {
+    --navbarWidth: 360px; /* Set width of navbar. Use px for a fixed width 
+                                  or vw for a percentage of your window. */
+    --animationSpeed: 0.15s;
+}
+
+/* H I D I N G   E L E M E N T S */
+/* Comment or uncomment depending of what elements you want to hide */
+
+/* Back button */
+#back-button {
+    display: none !important;
+}
+
+/* Hide back button only when disabled */
+#back-button[disabled="true"] {
+    display: none !important;
+}
+
+/* Forward button */
+#forward-button {
+    display: none !important;
+}
+
+/* Hide forward button only when disabled */
+#forward-button[disabled="true"] {
+    display: none !important;
+}
+
+/* "Shield" icon */
+#tracking-protection-icon-container {
+    display: none !important;
+}
+
+/* Site information button */
+#identity-box {
+    display: none !important;
+}
+
+/* This is the "Search with" indicator on the urlbar */
+#urlbar-one-offs-header-label {
+    display: none !important;
+}
+
+/* Zoom button */
+/* #urlbar-zoom-button { display: none !important } */
+
+/* Page action (right three dash button) */
+/* #pageActionButton { display: none !important } */
+
+/* These are the buttons on the right of the urlbar */
+#page-action-buttons {
+    display: none !important;
+}
+
+#urlbar-label-box {
+    display: none !important;
+}
+
+/* This one is the hamburger menu! */
+/* CAUTION: if you hide this some popups may be bugged */
+/* #PanelUI-button { display: none !important } */
+
+/* Tab close button */
+/* .tab-close-button { display: none !important } */
+
+/* Enable this to show the tab close button when hovering the tab */
+.tabbrowser-tab:hover .tab-close-button {
+    display: -moz-inline-box !important;
+}
+
+html#main-window {
+    --lwt-additional-images: none !important;
+}
+
+/*============================================================================*/
+
+/* Oneline tweak */
+
+#TabsToolbar {
+    margin-left: var(--navbarWidth) !important;
+    padding-right: 5px !important;
+}
+
+#nav-bar {
+    margin-right: calc(100vw - var(--navbarWidth)) !important;
+}
+
+#nav-bar:is([downloadsbuttonshown], [unifiedextensionsbuttonshown]) #urlbar-container {
+    width: calc(2 * var(--toolbarbutton-inner-padding)) !important;
+}
+
+#urlbar-container {
+    min-width: 0px !important;
+}
+
+:root[uidensity="compact"] #nav-bar {
+    margin-top: -37px !important;
+    height: 37px !important;
+}
+
+:root:not([uidensity="compact"]):not([uidensity="touch"]) #nav-bar {
+    margin-top: -44px !important;
+    height: 44px !important;
+}
+
+:root[uidensity="touch"] #nav-bar {
+    margin-top: -49px !important;
+    height: 49px !important;
+}
+
+/* Dragging space */
+:root[sizemode="maximized"] #TabsToolbar {
+    margin-top: 1px;
+}
+
+#TabsToolbar {
+    margin-top: 5px;
+}
+
+/* Simplifying interface */
+
+#nav-bar {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+#navigator-toolbox {
+    border: none !important;
+}
+
+.titlebar-spacer {
+    display: none !important;
+}
+
+#urlbar-background {
+    border: none !important;
+}
+
+#urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* Hide urlbar elements when not active */
+
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label {
+    fill: transparent !important;
+    background: transparent !important;
+    color: transparent !important;
+}
+
+#urlbar:hover .urlbar-icon,
+#urlbar:active .urlbar-icon,
+#urlbar[focused] .urlbar-icon {
+    fill: var(--toolbar-color) !important;
+}
+
+/* animations */
+toolbarbutton,
+.toolbarbutton-icon,
+.subviewbutton,
+#urlbar-background,
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label,
+.urlbar-input-box,
+#identity-box,
+#tracking-protection-icon-container,
+[anonid="urlbar-go-button"],
+.urlbar-icon-wrapper,
+#tracking-protection-icon,
+#identity-box image,
+stack,
+vbox,
+tab:not(:active) .tab-background,
+tab:not([beforeselected-visible])::after,
+tab[visuallyselected] .tab-background::before,
+tab[visuallyselected] .tab-background::before,
+.tab-close-button {
+    transition: var(--animationSpeed) !important;
+}
+
+/*============================================================================*/
+
+/* Personalization extras */
+
+/* Hamburger menu to the left */
+#PanelUI-button {
+    order: -2 !important;
+}
+/* #nav-bar-overflow-button {
+    order: -1 !important;
+} */
+#PanelUI-menu-button {
+    padding-inline-end: 0 !important;
+    padding-inline-start: 5px !important;
+}
+#appMenu-popup {
+    margin-right: -250px !important;
+}
+#widget-overflow {
+    margin-right: -328px !important;
+}
+#unified-extensions-panel {
+    margin-right: -355px !important;
+}
+
+/* Center URL text */
+#urlbar-input-container {
+    text-align: center !important;
+}
+
+/* Font 
+* {
+    font-family: Roboto !important;
+}
+*/
+
+/* Hide site information label */
+#identity-box label {
+    visibility: collapse !important;
+}
+
+/* Tab container line */
+.tab-context-line {
+    display: none !important;
+}
+
+/* Selected tab shadow and border */
+#tabbrowser-tabs:not([noshadowfortests])
+    .tab-background:is([selected], [multiselected]) {
+    box-shadow: none !important;
+}
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+    border: none !important;
+}
+
+/* Private browsing indicator */
+.private-browsing-indicator-icon {
+    opacity: 0.75 !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+[data-l10n-id="private-browsing-indicator-label"] {
+    display: none !important;
+}
+
+/* Make all tabs small except selected one */
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+    max-width: 140px !important;
+    min-width: 110px !important;
+}
+
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) .tab-icon-image {
+    filter: grayscale(0.5) contrast(0.5);
+    opacity: 0.5;
+}
+
+/* Selected tabs width */
+.tabbrowser-tab[selected][fadein]:not([pinned]) {
+    /*max-width: 225px !important;*/
+    min-width: 200px !important;
+}
+
+/* remove pinned tab gap */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+    > #tabbrowser-arrowscrollbox
+    > .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0 !important;
+}
+
+/* Status panel */
+#statuspanel #statuspanel-label {
+    appearance: none !important;
+    font-size: 12px !important;
+    border: 0px !important;
+    border-radius: 0px !important;
+    text-align: left !important;
+    color: var(--lwt-text-color) !important;
+}
+
+/* Sidebar borders */
+.sidebar-splitter {
+    border: none !important;
+}
+#sidebar-header {
+    border-bottom: none !important;
+}
+
+/* Toolbox border */
+#navigator-toolbox-background {
+    border-bottom: 1px solid var(--arrowpanel-border-color);
+}
+
+/* Remove selected tab border */
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon:-moz-lwtheme,
+.tab-background[selected]:not([multiselected="true"]):-moz-lwtheme {
+    outline: none !important;
+}
+
+/* replace email text */
+#appMenu-fxa-label2 #appMenu-header-description {
+    display: none !important;
+}
+#appMenu-popup #appMenu-fxa-label2::before {
+    content: "Firefox account" !important;
+}
+
+/* Accent color */
+:root {
+    /* Need to set only these: */
+    --primary-firefox-color: #1bed75 !important;
+    --hovered-firefox-color: #1bed75 !important;
+    --active-firefox-color: #1bed75 !important;
+    /*  */
+
+    --in-content-primary-button-background: var(
+        --primary-firefox-color
+    ) !important;
+    --in-content-primary-button-background-hover: var(
+        --hover-firefox-color
+    ) !important;
+    --in-content-primary-button-background-active: var(
+        --active-firefox-color
+    ) !important;
+    --buttons-primary-button-bgcolor: var(--primary-firefox-color) !important;
+    --buttons-primary-button-hover-bgcolor: var(
+        --hover-firefox-color
+    ) !important;
+    --buttons-primary-button-active-bgcolor: var(
+        --active-firefox-color
+    ) !important;
+    --checkbox-checked-bgcolor: var(--primary-firefox-color) !important;
+    --checkbox-checked-hover-bgcolor: var(--hover-firefox-color) !important;
+    --checkbox-checked-active-bgcolor: var(--active-firefox-color) !important;
+    --lwt-popup-brighttext-url-color: var(--primary-firefox-color) !important;
+    --focus-outline-color: var(--primary-firefox-color) !important;
+}
+:root[lwt-toolbar-field-brighttext] {
+    --autocomplete-popup-highlight-background: #1bed75 !important;
+}
+
+@-moz-document regexp("^(about:|chrome:|moz-extension:).*") {
+    html:not([role="dialog"]),
+    html:not([role="dialog"]) *,
+    html:not([role="dialog"]) body.activity-stream,
+    window:not([chromehidden]),
+    window:not([chromehidden]) > dialog {
+        --in-content-primary-button-background: var(
+            --primary-firefox-color
+        ) !important;
+        --in-content-primary-button-background-hover: var(
+            --hovered-firefox-color
+        ) !important;
+        --in-content-primary-button-background-active: var(
+            --active-firefox-color
+        ) !important;
+    }
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/color_variable_template.css made available under Mozilla Public License v. 2.0 */
+:root {
+    /* Popup panels */
+    --arrowpanel-background: rgb(32, 32, 32) !important;
+    --arrowpanel-border-color: rgb(58, 58, 58) !important;
+    --arrowpanel-color: rgb(255, 255, 255) !important;
+    --arrowpanel-dimmed: rgb(53, 53, 53) !important;
+    /* window and toolbar background */
+    --lwt-frame: rgb(32, 32, 32) !important; /* pre fx94 */
+    --lwt-accent-color: rgb(32, 32, 32) !important;
+    --lwt-accent-color-inactive: rgb(32, 32, 32) !important;
+    --toolbar-bgcolor: rgb(53, 53, 53) !important;
+    /* tabs with system theme - text is not controlled by variable */
+    --tab-selected-bgcolor: rgb(53, 53, 53) !important;
+    /* tabs with any other theme */
+    --lwt-text-color: rgb(148, 148, 148) !important;
+    --lwt-selected-tab-background-color: rgb(53, 53, 53) !important;
+    /* toolbar area */
+    --toolbarbutton-icon-fill: rgb(148, 148, 148) !important;
+    --lwt-toolbarbutton-hover-background: rgb(53, 53, 53) !important;
+    --lwt-toolbarbutton-active-background: rgb(53, 53, 53) !important;
+    /* urlbar */
+    --toolbar-field-border-color: rgb(38, 38, 38) !important;
+    --toolbar-field-focus-border-color: var(--active-firefox-color) !important;
+    --urlbar-popup-url-color: var(--active-firefox-color) !important;
+    /* urlbar Firefox < 92 */
+    --lwt-toolbar-field-background-color: rgb(32, 32, 32) !important;
+    --lwt-toolbar-field-focus: rgb(53, 53, 53) !important;
+    --lwt-toolbar-field-color: rgb(53, 53, 53) !important;
+    --lwt-toolbar-field-focus-color: rgb(255, 255, 255) !important;
+    /* urlbar Firefox 92+ */
+    --toolbar-field-background-color: rgb(32, 32, 32) !important;
+    --toolbar-field-focus-background-color: rgb(53, 53, 53) !important;
+    --toolbar-field-color: rgb(255, 255, 255) !important;
+    --toolbar-field-focus-color: rgb(255, 255, 255) !important;
+    /* sidebar - note the sidebar-box rule for the header-area */
+    --lwt-sidebar-background-color: rgb(20, 20, 20) !important;
+    --lwt-sidebar-text-color: rgb(255, 255, 255) !important;
+    /* toolbar buttons */
+    --button-bgcolor: rgb(32, 32, 32) !important;
+    --button-hover-bgcolor: rgb(53, 53, 53) !important;
+    --button-active-bgcolor: rgb(53, 53, 53) !important;
+
+    --lwt-toolbarbutton-icon-fill-attention: var(
+        --primary-firefox-color
+    ) !important;
+    --button-primary-bgcolor: var(--primary-firefox-color) !important;
+    --button-primary-hover-bgcolor: color-mix(
+        in srgb,
+        currentColor 12%,
+        var(--hovered-firefox-color)
+    ) !important;
+    --button-primary-active-bgcolor: color-mix(
+        in srgb,
+        currentColor 17%,
+        var(--active-firefox-color)
+    ) !important;
+    --button-primary-color: var(--button-color) !important;
+}
+/* line between nav-bar and tabs toolbar,
+      also fallback color for border around selected tab */
+#navigator-toolbox {
+    --lwt-tabs-border-color: rgb(38, 38, 38) !important;
+}
+/* Line above tabs */
+#tabbrowser-tabs {
+    --lwt-tab-line-color: transparent !important;
+}
+/* the header-area of sidebar needs this to work */
+#sidebar-box {
+    --sidebar-background-color: rgb(20, 20, 20) !important;
+}
+
+/* Places or library window */
+@-moz-document url(chrome://browser/content/places/places.xhtml)
+{
+    :root {
+        --organizer-color: rgb(255, 255, 255) !important;
+        --organizer-deemphasized-color: rgb(191, 191, 201) !important;
+        --organizer-toolbar-background: rgb(32, 32, 32) !important;
+        --organizer-pane-background: rgb(20, 20, 20) !important;
+        --organizer-content-background: rgb(25, 25, 25) !important;
+        --organizer-hover-background: rgb(53, 53, 53) !important;
+        --organizer-selected-background: rgb(30, 30, 30) !important;
+        --organizer-outline-color: var(--primary-firefox-color) !important;
+        --organizer-toolbar-field-background: rgb(32, 32, 32) !important;
+        --organizer-toolbar-field-background-focused: rgb(
+            53,
+            53,
+            53
+        ) !important;
+        --organizer-border-color: rgb(58, 58, 58) !important;
+        --default-focusring: none !important;
+        scrollbar-color: rgba(249, 249, 250, 0.4) rgba(20, 20, 25, 0.3) !important;
+    }
+    treechildren,
+    richlistbox {
+        border: none !important;
+        padding: 4px !important;
+        border-radius: 2px !important;
+    }
+    #placesView > splitter {
+        border-inline-end: none !important;
+    }
+    richlistbox:where(:focus) > richlistitem[selected="true"],
+    richlistitem[selected="true"] {
+        background-color: var(--organizer-selected-background) !important;
+        color: var(--organizer-color) !important;
+    }
+    treecol,
+    treecolpicker {
+        background-color: var(--organizer-content-background) !important;
+    }
+    #placeContent {
+        padding: 4px !important;
+        border-radius: 2px !important;
+    }
+    #contentView treecol {
+        box-shadow: none !important;
+    }
+    #placesList {
+        padding: 4px 0 !important;
+    }
+    #placesView {
+        border-top: 1px solid var(--organizer-border-color);
+    }
+    #placesToolbar,
+    #placesToolbox,
+    #places {
+        background-color: transparent !important;
+        -moz-appearance: -moz-win-borderless-glass !important;
+    }
+    #searchFilter {
+        background-color: transparent !important;
+    }
+    #detailsPane {
+        background-color: var(--organizer-content-background) !important;
+    }
+}
+
+/* Thanks to https://github.com/KibSquib48/MicaFox */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fluent-accent: color-mix(in srgb, #f3f3f3 25%, -moz-accent-color);
+        --fluent-accent-text: #000;
+        --mica-background: rgba(255, 255, 255, 0.05);
+        --toolbar-field-focus-background-color: #202020 !important;
+        --lwt-selected-tab-background-color: var(--mica-background) !important;
+        --arrowpanel-background: #191919 !important;
+    }
+    ::selection {
+        color: #fff !important;
+    }
+    :focus {
+        color: #fff !important;
+    }
+    menupopup {
+        --menu-background-color: #191919 !important;
+        --menu-color: #f9f9f9 !important;
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --fluent-accent: color-mix(in srgb, #202020 15%, -moz-accent-color);
+        --fluent-accent-text: #fff;
+        --mica-background: rgba(255, 255, 255, 0.5);
+        --toolbar-field-focus-background-color: #f3f3f3 !important;
+        --tab-selected-bgcolor: var(--mica-background) !important;
+        --arrowpanel-background: #f9f9f9 !important;
+    }
+    ::selection {
+        color: #000 !important;
+    }
+    :focus {
+        color: #000 !important;
+    }
+    menupopup {
+        --menu-background-color: #f9f9f9 !important;
+        --menu-color: #2c2c2c !important;
+    }
+}
+
+:root {
+    --toolbar-field-background-color: var(--mica-background) !important;
+    --toolbar-bgcolor: var(--mica-background) !important;
+    --dark-menu-color: var(--mica-background) !important;
+    --menu-border-color: transparent !important;
+    --button-hover-bgcolor: var(--mica-background) !important;
+    --button-active-bgcolor: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Mica */
+#main-window {
+    background-color: transparent !important;
+    -moz-appearance: -moz-win-borderless-glass !important;
+}
+#navigator-toolbox {
+    background: transparent !important;
+}
+#TabsToolbar {
+    background-image: none !important; /* Windows 7 */
+}
+
+/* fix duplicate title bar buttons */
+.titlebar-buttonbox-container {
+    display: block;
+}
+.titlebar-buttonbox {
+    height: 30px;
+}
+.titlebar-button,
+.titlebar-close,
+.titlebar-button:hover,
+.titlebar-close:hover {
+    list-style-image: none !important;
+    background-color: transparent !important;
+}
+
+/* context menu */
+@media (-moz-windows-non-native-menus) {
+    menupopup {
+        --panel-border-radius: 6px !important;
+        --panel-padding: 6px 3px !important;
+        --panel-border-color: #3a3a3a !important;
+        --panel-background: #1b1b1bee !important;
+        --nested-margin: -10px !important;
+    }
+    menupopup,
+    panel {
+        --panel-color: #c0c0c0 !important;
+        --panel-shadow: 0 6px var(--panel-shadow-margin) hsla(0, 0%, 0%, 0.2) !important;
+        --panel-shadow-margin: 10px !important;
+    }
+    menuseparator {
+        border-top: 1px solid #323232 !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+        background-color: #343434ee !important;
+        color: #fff !important;
+        border-radius: 3px;
+    }
+    menu:where([disabled="true"]),
+    menuitem:where([disabled="true"]),
+    menu:where([_moz-menuactive="true"][disabled="true"]),
+    menuitem:where([_moz-menuactive="true"][disabled="true"]) {
+        color: #565656 !important;
+    }
+    menu,
+    menuitem,
+    menucaption {
+        appearance: none !important;
+    }
+    #context-navigation
+        > .menuitem-iconic[_moz-menuactive="true"]
+        > .menu-iconic-left
+        > .menu-iconic-icon,
+    #context-navigation
+        > .menuitem-iconic[_moz-menuactive="true"][disabled="true"]
+        > .menu-iconic-left
+        > .menu-iconic-icon {
+        background-color: transparent !important;
+    }
+    menu:where([_moz-menuactive="true"][disabled="true"]),
+    menuitem:where([_moz-menuactive="true"][disabled="true"]) {
+        background-color: #252525ee !important;
+        border-radius: 3px;
+    }
+}

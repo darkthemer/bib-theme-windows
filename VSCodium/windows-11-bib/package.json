@@ -1,0 +1,25 @@
+{
+  "name": "windows-11-bib",
+  "displayName": "Windows 11 BIB",
+  "description": "UI Colors based on Niivu's BIB3 Custom Windows Theme & Syntax Colors from Tobias Althoff's Atom Material Theme",
+  "author": {
+    "name": "darkthemer"
+  },
+  "publisher": "darkthemer",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Windows 11 BIB",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Windows 11 BIB-color-theme.json"
+      }
+    ]
+  }
+}

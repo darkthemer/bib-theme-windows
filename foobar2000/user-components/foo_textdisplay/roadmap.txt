@@ -1,0 +1,11 @@
+1.1 [end of June 2011]
+----------------------
+CHG: Update to current foobar2000 SDK.
+NEW: Documentation on foobar2000 wiki.
+NEW: User-defined command IDs for use with $cmdlink().
+NEW: Display hover text for links in status bar.
+NEW: Option to disable confirmation dialog for links.
+
+1.2 [no date planned yet]
+-------------------------
+CHG: Change text format within lines (<dim>, >highlight< and links).

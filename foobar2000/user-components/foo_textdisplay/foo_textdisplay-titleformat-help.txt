@@ -1,0 +1,114 @@
+Color Format
+- <<<25% default 75% background>>>
+- <<50% default 50% background>>
+- <75% default 25% background>
+- >67% default 33% highlight<
+- >>33% default 67% highlight<<
+- >>>highlight<<<
+
+Link Format
+- {{parameters}}
+  The encoding of a link. Do not use directly, see functions below.
+
+Link Functions
+- $applink(label,application)
+- $applink(label,application,arguments)
+- $applink(label,application,arguments,directory)
+  Generates a link that will run the given application.
+  If arguments are given, they will be passed to the application.
+  If a directory is given, the application will be run in that directory.
+- $cmdlink(label,id)
+  Generates a link that will run the menu command identified by the given ID.
+  See below for a list of predefined command IDs.
+- $doclink(label,url)
+  Generates a link that will open the given document or web site.
+
+Utility Functions
+- $urlencode(text)
+  Encodes the given text so it can be used as part of a URL.
+
+Date Functions
+- $days_ago(date)
+  Computes the number of days that have passed since the given date.
+- $day_of_week(date)
+  Computes the day of the week of the given date as a number between 1 and 7.
+
+Predefined Command IDs
+- context_convert_run
+- context_convert_run_singlefile
+- context_convert_run_withcue
+- context_copy_names
+- context_file_open_directory
+- context_file_properties
+- context_masstag_edit
+- context_masstag_rename
+- context_reload_info
+- context_reload_info_if_changed
+- context_remove_from_database
+- context_remove_tags
+- context_rewrite_info
+- context_rg_remove
+- context_rg_scan_album
+- context_rg_scan_album_multi
+- context_rg_scan_track
+- context_save_playlist
+- context_send_to_playlist
+- context_write_cd
+- main_about
+- main_activate
+- main_activate_or_hide
+- main_add_directory
+- main_add_files
+- main_add_location
+- main_add_playlist
+- main_always_on_top
+- main_clear_playlist
+- main_create_playlist
+- main_cursor_follows_playback
+- main_exit
+- main_hide
+- main_highlight_playing
+- main_load_playlist
+- main_next
+- main_next_or_random
+- main_next_playlist
+- main_open
+- main_pause
+- main_play
+- main_play_cd
+- main_play_or_pause
+- main_playback_follows_cursor
+- main_playlist_moveback
+- main_playlist_moveforward
+- main_playlist_redo
+- main_playlist_search
+- main_playlist_sel_crop
+- main_playlist_sel_invert
+- main_playlist_sel_remove
+- main_playlist_select_all
+- main_playlist_undo
+- main_preferences
+- main_previous
+- main_previous_playlist
+- main_random
+- main_record
+- main_remove_dead_entries
+- main_remove_duplicates
+- main_remove_playlist
+- main_rename_playlist
+- main_restart
+- main_restart_resetconfig
+- main_rg_disable
+- main_rg_set_album
+- main_rg_set_track
+- main_save_all_playlists
+- main_save_playlist
+- main_saveconfig
+- main_show_console
+- main_show_now_playing
+- main_stop
+- main_stop_after_current
+- main_titleformat_help
+- main_volume_down
+- main_volume_mute
+- main_volume_up

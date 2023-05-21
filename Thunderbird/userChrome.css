@@ -1,0 +1,179 @@
+:root {
+    --lwt-accent-color: rgb(25, 25, 25) !important;
+    --lwt-text-color: rgba(207, 207, 207) !important;
+    --arrowpanel-background: rgb(25, 25, 25) !important;
+    --panel-disabled-color: rgba(208, 208, 208, 0.5) !important;
+    --panel-description-color: rgba(208, 208, 208, 0.7) !important;
+    --arrowpanel-color: rgba(208, 208, 208, 1) !important;
+    --arrowpanel-border-color: rgb(68, 68, 68) !important;
+    --toolbar-field-background-color: rgb(32, 32, 32) !important;
+    --toolbar-field-color: rgb(119, 119, 119) !important;
+    --toolbar-field-border-color: rgba(0, 0, 0, 0) !important;
+    --toolbar-field-focus-background-color: rgba(51, 51, 51, 1) !important;
+    --toolbar-field-focus-color: rgb(255, 255, 255) !important;
+    --toolbar-field-focus-border-color: rgb(58, 58, 58) !important;
+    --lwt-toolbar-field-highlight: rgba(58, 58, 58, 1) !important;
+    --lwt-toolbar-field-highlight-text: rgb(255, 255, 255) !important;
+    --tab-loading-fill: rgb(58, 58, 58) !important;
+    --lwt-tab-text: rgb(255, 255, 255) !important;
+    --lwt-tab-line-color: rgba(0, 0, 0, 0) !important;
+    --lwt-background-tab-separator-color: rgba(0, 0, 0, 0) !important;
+    --toolbar-bgcolor: rgb(25, 25, 25) !important;
+    --toolbar-color: rgb(208, 208, 208) !important;
+    --lwt-tabs-border-color: rgba(0, 0, 0, 0) !important;
+    --toolbarseparator-color: rgb(68, 68, 68) !important;
+    --chrome-content-separator-color: rgb(68, 68, 68) !important;
+    --lwt-selected-tab-background-color: rgb(51, 51, 51) !important;
+    --autocomplete-popup-highlight-background: rgb(58, 58, 58) !important;
+    --autocomplete-popup-highlight-color: rgb(255, 255, 255) !important;
+    --sidebar-background-color: rgb(20, 20, 20) !important;
+    --sidebar-text-color: rgb(208, 208, 208) !important;
+    --sidebar-highlight-background-color: rgb(58, 58, 58) !important;
+    --sidebar-highlight-text-color: rgb(30, 30, 30) !important;
+    --sidebar-border-color: rgb(25, 25, 25) !important;
+    --sidebar-highlight-border-color: rgb(58, 58, 58) !important;
+}
+
+#mail-notification-top,
+#spacesPinnedButton {
+    /* remove remote content warning */
+    display: none;
+}
+
+.spaces-toolbar:not([hidden]) {
+    /* remove spaces button */
+    background-image: none !important;
+    border-inline-end: none !important;
+}
+
+treecol,
+treecolpicker {
+    box-shadow: none !important;
+}
+
+.searchBox:hover {
+    box-shadow: none !important;
+    border: 1px solid var(--sidebar-highlight-border-color) !important;
+}
+
+.mail-toolbox:-moz-lwtheme {
+    background-image: none !important;
+}
+
+:root:-moz-lwtheme treecol {
+    border-inline-end: 1px solid var(--sidebar-highlight-border-color) !important;
+}
+
+:root[lwt-tree-brighttext] {
+    --bg-color: var(--sidebar-background-color) !important;
+}
+
+:root:-moz-lwtheme treecol:not([hideheader="true"]),
+:root:-moz-lwtheme treecolpicker:not([hideheader="true"]) {
+    padding-block: 5px !important;
+    margin-top: 5px;
+}
+
+.plain-button.tab-close-button {
+    /* remove close tab button */
+    display: none !important;
+}
+
+#widget-overflow,
+#appMenu-popup {
+    margin-top: 6px !important;
+}
+
+/* Thanks to https://github.com/ScanuNicco/Modern-ThunderBird */
+/* On macos, the titlebar has to be made high enough */
+#titlebar {
+    height: 45px;
+}
+
+#navigation-toolbox,
+#tabmail-tabs,
+#tabmail-arrowscrollbox {
+    /* Outer tab containers */
+    min-height: 45px !important;
+}
+
+.tabmail-tab {
+    /* Give the tabs a bit of a margin */
+    margin: 4px !important;
+}
+
+.tab-background {
+    /* Round tab corners and add a bit of padding */
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.tab-line {
+    /* Eliminate the line at the top of the tab */
+    height: 0px !important;
+    display: none !important;
+}
+
+.tabmail-tab::after,
+.tabmail-tab::before {
+    /* Eliminate the line between inactive tabs */
+    border: none !important;
+}
+
+.toolbarbutton-1,
+.searchBox,
+.themeableSearchBox {
+    /* Eliminate borders, round corners, and increase height on buttons and search bars */
+    border: none !important;
+    border-radius: 5px !important;
+    height: 31px !important;
+}
+
+.panel-arrowbox {
+    /* hide the arrow on popup menus */
+    display: none;
+}
+
+.panel-arrowcontent {
+    /* Eliminate borders, round corners, and increase padding on popup menus */
+    padding: 5px !important;
+    border-radius: 5px;
+    border: none;
+}
+
+#main-window, #mail-toolbox {
+    /* aero/mica window transparency */
+    background-color: transparent !important;
+    -moz-appearance: -moz-win-glass !important;
+}
+
+toolbar#nav-bar {
+    /* aero/mica window transparency */
+    background: none !important;
+}
+
+#navigation-toolbox:-moz-lwtheme, #ab-toolbox:-moz-lwtheme, #compose-toolbox:-moz-lwtheme {
+    /* aero/mica window transparency */
+    --lwt-accent-color: transparent !important;
+}
+
+.tabmail-tab .tab-background[selected="true"]:-moz-lwtheme {
+    /* aero/mica window transparency */
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1)
+    ) !important;
+}
+
+.gloda-search:-moz-lwtheme,
+.remote-gloda-search:-moz-lwtheme,
+:root[lwt-tree] .themeableSearchBox,
+#peopleSearchInput:not([focused="true"]):-moz-lwtheme {
+    /* aero/mica window transparency */
+    --toolbar-field-background-color: transparent !important;
+}
+
+#threadTree {
+    /* reassign thread tree color */
+    background-color: var(--sidebar-border-color) !important;
+}

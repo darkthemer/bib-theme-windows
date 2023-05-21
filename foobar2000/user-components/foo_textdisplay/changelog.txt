@@ -1,0 +1,50 @@
+1.1 beta 1 (2011-05-29)
+-----------------------
+CHG: Display: UI element has a thin border.
+NEW: Display: Support for <dimmed> and >highlighted< lines. Three levels of shading are supported.
+NEW: Display: Support for clickable links. Links can run an application, run a menu command or open a document.
+NEW: Title formatting: $applink(label,cmd,args), $cmdlink(label,id) and $doclink(label,url) functions to generate links.
+NEW: Title formatting: $urlencode function; assists with constructing links to web sites.
+
+1.0 RC 1 (2008-07-05)
+---------------------
+FIX: Display: Mouse wheel scrolling.
+
+1.0 beta 6 (2008-07-03)
+-----------------------
+CHG: Display: Removed support for sections.
+NEW: Display: Vertical scrollbar is shown if necessary.
+NEW: Display: Keyboard interface for vertical scrolling.
+NEW: Display: Mouse wheel support for scrolling.
+
+1.0 beta 5 (2008-06-15)
+-----------------------
+FIX: UI Element: Crash during initialization.
+
+1.0 beta 4 (2008-06-13)
+-----------------------
+CHG: Display: Leading and trailing whitespace in normal lines and table cells is no longer ignored.
+FIX: Display: Last line in the output no longer ignored if it has no linebreak.
+
+1.0 beta 3 (2008-06-13)
+-----------------------
+CHG: Configuration: Format changed. Data from previous versions cannot be imported.
+CHG: Configuration: Colors can be overridden individually.
+NEW: Display: Sections. A line containing only "=Title=" will produce a section labeled "Title". The section will be hidden, if it contains only blank lines.
+NEW: Display: Two-column tables. Use tabulator ($tab) to separate left and right column.
+
+1.0 beta 2 (2008-05-30)
+-----------------------
+NEW: Context menu: "Copy text": Copies the displayed text to the Windows clipboard.
+CHG: Context menu: Replaced "Follow selection" by "Prefer playing track" which has exactly the opposite meaning.
+CHG: UI Element: Moved to "Selection Properties" category.
+CHG: Display: When playback is stopped and the selection is empty, the title formatting script is evaluated when "Prefer playing track" is enabled, otherwise "Nothing selected." is displayed.
+CHG: Title formatting: %isselected% field; defined when the first item of the selection is used for title formatting instead of the playing track.
+
+1.0 beta 1 (2008-05-30)
+-----------------------
+NEW: Configuration: Per-instance configuration.
+NEW: Configuration: Horizontal and vertical alignment.
+NEW: Configuration: Font and color overrides.
+NEW: Title formatting: $day_of_week(<date>) function; returns index of day of week, Sunday is 1, Saturday is 7. (For use with $select().)
+NEW: Context menu: "Follow selection" option. If enabled, the element does not check whether a track is playing and always display the first track of the selection.

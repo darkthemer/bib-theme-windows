@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Text Display (foo_textdisplay)</title>
+<style type="text/css">
+body, p, h1, h2, h3, h4, h5, h6, table, td, th, li, ul, ol, a {
+ font-family: verdana, helvetica, arial, sans-serif;
+ line-height: 130%;
+}
+
+body {
+ font-size: 80%;
+ color: #000000;
+ background: #ffffff;
+ font-weight : normal;
+ font-style : normal;
+ text-decoration : none;
+ margin: 0;
+ padding: 0;
+}
+
+.content {
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-top: 1.5em;
+ margin-bottom: 1.5em;
+}
+
+.navbar {
+ background: #E0EDF9;
+ border-bottom: 1px solid #C5E0F7;
+ margin: 0;
+ padding-left: 5%;
+ padding-right: 5%;
+ padding-top: 0;
+ padding-bottom: 0;
+}
+
+.navbar ul {
+ list-style-type: none;
+ width: 100%;
+ margin: 0 -1ex;
+ padding: 0;
+}
+
+.navbar li {
+ display: inline;
+ padding: 0 1ex;
+}
+
+.footer {
+ background: #ffffff;
+ color: #555555;
+ border-top: 1px solid #dddddd;
+ margin: 0;
+ padding-left: 5%;
+ padding-right: 5%;
+ padding-top: 0;
+ padding-bottom: 0;
+}
+
+.version {
+ font-size: 161%;
+ color: #000000;
+ font-weight: bold;
+ margin-top: 1em;
+}
+
+table {
+ empty-cells: show;
+ border-collapse: collapse;
+ background-color: #ffffff;
+}
+
+th, td {
+ border: 1px solid #8088b0;
+ padding: 0.2em 0.5em;
+}
+
+th {
+ text-align: left;
+ background-color: #eeeeff;
+}
+
+td {
+ vertical-align: top;
+}
+
+li, ul, ol {
+ padding: 0;
+ margin: 0;
+}
+
+ul {
+ list-style-type: square;
+ padding-left: 0;
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 1.5em;
+}
+
+/* general headline setup */
+h1, h2, h3, h4, h5 {
+	color: Black;
+	background-color: transparent;
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0 0 1em 0;
+	padding: 0.5em 0 0 0;
+	border-bottom: 1px dotted #000000;
+	clear:left;
+}
+
+/* special headlines */
+h1 {font-size: 160%; font-weight: bold;}
+h2 {font-size: 150%; font-weight: bold; }
+h3 {font-size: 130%; font-weight: bold; border-bottom: none; }
+h4 {font-size: 120%; border-bottom: none; }
+h5 {font-size: 100%; border-bottom: none; }
+
+a:link, a:visited, a:active, a:hover {
+ text-decoration: underline;
+}
+
+.footer a, .navbar a {
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+ background: transparent;
+}
+
+a:link, a:visited {
+ color: #555555;
+}
+
+a:active, a:hover {
+ color: #333333;
+}
+
+a:hover {
+ background: #e0e0e0;
+}
+
+a.icon {
+ text-decoration: none;
+ background: transparent;
+}
+
+.main {
+ width: auto;
+}
+
+.center {
+ width: auto;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+}
+
+.plugin{
+ margin-top: 1ex;
+}
+
+.note {
+ border-width: 1px 1px 1px 3px;
+ border-color: #99bb88;
+ border-style: solid;
+ background: #eeffdd;
+ margin-top: 1em;
+ margin-bottom: 1em;
+}
+
+.noteh, .noteb {
+ padding-left: 1em;
+ padding-right: 1em;
+}
+
+.noteh {
+ font-weight: bold;
+ /*background: #ddddff;*/
+ /*background: #B6D2AD;*/
+ background: #CDB;
+}
+
+.noteb {
+}
+
+img {
+ border: 0;
+ padding: 0;
+ margin: 0;
+}
+
+.icon img {
+ vertical-align: middle;
+ margin-bottom: 1px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<ul>
+ <li><a href="#intro">Introduction</a></li>
+ <li><a href="#install">Installation</a></li>
+ <li><a href="#configure">Configuration</a></li>
+ <li><a href="#links">Links</a></li>
+ <li><a href="#faq">FAQ</a></li>
+</ul>
+</div>
+
+<div class="content">
+
+<h2>Text Display (foo_textdisplay) 1.1 beta 1</h2>
+
+<a id="intro"></a>
+<h3>Introduction</h3>
+
+<p>
+Text Display is a UI Element for the foobar2000 Default User Interface. It displays text that is generated from the meta data of a track using a title formatting script.
+Text Display supports only limited support for formatting the displayed text. Paragraphs can be dimmed or highlighted or they can be turned into clickable links that
+run an application, a foobar2000 menu command or open a document or web site.
+</p>
+
+<img src="foo_textdisplay-ui-element.png"/>
+
+<a id="install"></a>
+<h3>Installation</h3>
+
+<p>
+<b>TODO</b>
+</p>
+
+<a id="configure"></a>
+<h3>Configuration</h3>
+
+<p>
+The context menu for the Text Display UI Element contains two commands that are related to configuration.
+If "Prefer playing track" is enabled, the element always shows information about the playing track during playback and falls back to the first item of the current selection when playback is stopped.
+If it is enabled, the element always displays information about the first item of the current selection. The "Settings..." command opens the Text Display Settings dialog.
+</p>
+
+<p>
+Changes in the options in the settings dialog will be immediately reflected in the UI element itself.
+When the OK button is clicked, the changes are applied permanently and the settings dialog is closed.
+When the Cancel button is clicked, the configuration changes are discarded and the settings dialog is closed.
+Closing the settings dialog through other means like pressing the Escape key or clicking the close button in the window caption bar has the same effect as clicking Cancel.
+</p>
+
+<img src="foo_textdisplay-settings-1.png"/>
+
+<p>
+The Format tab contains only a text control to enter the title formatting string used to format the displayed information.
+The $crlf() function can be used to insert a linebreak in the output. There are no other formatting options that can be used in the title formatting script.
+</p>
+<p>
+The only custom field is %isplaying% which is defined as "1" if "Prefer playing track" is enabled and playback is not stopped. Otherwise it is undefined.
+</p>
+
+<img src="foo_textdisplay-settings-2.png"/>
+
+<p>
+The Layout &amp; Style tab contains options that affect position, font and colors of the display text.
+By default, the element uses the default font and the text and background colors that are configured in the Default User Interface, but those settings can be overridden on this tab.
+</p>
+
+<a id="links"></a>
+<h3>Links</h3>
+<ul>
+<li><a href="http://www.hydrogenaudio.org/forums/index.php?showtopic=64478">Text Display Forum Thread</a><br />The Text Display thread on the foobar2000 forum.</li>
+<li><a href="foo_textdisplay-titleformat-help.txt">Text Display Title Formatting Help</a><br />Describes the title formatting features that Text Display provides.</li>
+<li><a href="changelog.txt">Change Log</a><br />Describes the changes made between different versions of Text Display.</li>
+<li><a href="roadmap.txt">Roadmap</a><br />Describes the plan for the further development of Text Display.</li>
+<li><a href="foo_textdisplay-sample.fth">Sample Theme File</a><br />The foobar2000 theme file (.fth) for the Text Display configuration used for the screenshots in this document.</li>
+</ul>
+
+<a id="faq"></a>
+<h3>Frequently Asked Questions</h3>
+
+<ul>
+<li><b>Is it possible to hide the vertical scroll bar?</b><br />No, and no such option is planned.</li>
+<li><b>Is it possible to disable the word-wrapping?</b><br />No.</li>
+<li><b>Is it possible to use tabs or color codes in title formatting string?</b><br />No.</li>
+<li><b>Is it possible to display the content of a text file?</b><br />No.</li>
+<li><b>Is it possible to display lyrics that are stored in tags?</b><br />Yes. For example, you could set the format to "$if2(%lyrics%,No lyrics available)".</li>
+<li><b>The answer to "Is it possible to do X?" is "No" without including "no such option is planned". Does that mean X will be implemented eventually?</b><br />No, there is no such implied promise.</li>
+</ul>
+
+</div>
+
+<div class="footer">
+&copy; 2011 Holger Stenger
+</div>
+
+</body>
+</html>
