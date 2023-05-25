@@ -8,6 +8,11 @@
     --tab-border-radius: 6px;
     --user-widget-name-display: none; /* block | none */
 
+    /* main view vars */
+    --playing-icon-color: hue-rotate(
+        0deg
+    ); /* manually set to match accent color */
+
     /* sidebar vars */
     --create-playlist-liked-songs-display: none; /* flex | none */
     --sidebar-button-border-radius: 4px;
@@ -48,16 +53,7 @@
 }
 
 /* design additions */
-a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
-    content: "";
-    position: relative;
-    height: 25px;
-    width: 3px;
-    left: -15px;
-    border-radius: 1.5px;
-    background-color: var(--spice-button);
-    margin-right: -19px;
-}
+a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before,
 .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive::before,
 .main-rootlist-rootlistItemLink:focus::before {
     content: "";
@@ -163,7 +159,7 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
     /* rearrange grid layout */
     grid-template-areas:
         "top-bar top-bar top-bar"
-        "left-sidebar main-view right-sidebar"
+        "nav-bar main-view buddy-feed"
         "now-playing-bar now-playing-bar now-playing-bar";
     grid-template-rows: auto 1fr auto;
 }
@@ -263,12 +259,12 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
 }
 .main-trackList-trackListHeader,
 .EvQHNTBhaU3rGCRRlAWj,
-.search-searchCategory-SearchCategory {
+.fVB_YDdnaDlztX7CcWTA {
     /* fix track list header & search type tabs */
     top: 0 !important;
     height: auto;
 }
-.search-searchCategory-SearchCategory {
+.fVB_YDdnaDlztX7CcWTA {
     /* fix search type tabs */
     border-bottom: 1px solid rgba(var(--spice-rgb-selected-row), 0.1);
     padding: 16px 0;
@@ -284,7 +280,7 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
     background-color: var(--spice-main);
     box-shadow: none;
 }
-.queue-queuePage-queuePage {
+.rHpv7osDRvs3SUPMpQ_g {
     /* replace margin with padding */
     margin-top: 0;
     padding-top: 40px;
@@ -337,9 +333,6 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
 .xaeunxBdlShScWay5mQR {
     margin-bottom: 16px;
 }
-.artist-artistOverview-artistOverviewContent {
-    background-color: transparent;
-}
 /* cards */
 .main-cardImage-imageWrapper {
     background-color: transparent;
@@ -377,7 +370,7 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
     --bg-color: rgba(var(--spice-rgb-subtext), 0.3);
     --fg-color: var(--spice-subtext);
 }
-.x-progressBar-fillColor {
+.epWhU7hHGktzlO_dop6z {
     /* fluid progress bars */
     transition: transform, 0s, ease, 0.25s;
 }
@@ -483,6 +476,18 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
     /* fix sidebar buttons' icons */
     color: unset;
 }
+.encore-light-theme .encore-bright-accent-set,
+.encore-dark-theme .encore-bright-accent-set {
+    /* replace spotify green with set accent color */
+    --background-highlight: var(--spice-button-active) !important;
+    --background-press: var(--spice-button) !important;
+    --decorative-subdued: var(--spice-button) !important;
+}
+.main-addButton-active:focus,
+.main-addButton-active:hover {
+    /* replace spotify green on hover */
+    color: var(--spice-button-active);
+}
 #_R_G *:not([fill="none"]) {
     /* fix heart color on click */
     color: var(--spice-button-active);
@@ -499,7 +504,7 @@ a.link-subtle.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
 .gv7Rcc2ouDRSd0pto7Df,
 .main-trackList-playingIcon {
     /* replace green visualiser / playing icon & equalizer accent color */
-    filter: grayscale(1);
+    filter: var(--playing-icon-color);
 }
 .main-trackList-placeholder {
     /* recolor loading tracklist */
