@@ -5,45 +5,42 @@ various Windows apps themed to match with [BIB 22H2](https://www.deviantart.com/
 # Apps
 
 ## Caprine
-![](_Screenshots/caprine.png)
+![](_screenshots/caprine.png)
 
 ## Discord
-![](_Screenshots/discord.png)
+![](_screenshots/discord.png)
 
 ## Explorer
-![](_Screenshots/explorer.png)
+![](_screenshots/explorer.png)
 
 ## Firefox
-![](_Screenshots/firefox.png)
+![](_screenshots/firefox.png)
 
 ## foobar2000
-![](_Screenshots/foobar2000.png)
-
-## nomacs
-![](_Screenshots/nomacs.png)
+![](_screenshots/foobar2000.png)
 
 ## qBittorrent
-![](_Screenshots/qbittorrent.png)
+![](_screenshots/qbittorrent.png)
 
 ## Spotify
-![](_Screenshots/spotify.png)
+![](_screenshots/spotify.png)
 
 ## Steam
-![](_Screenshots/steam.png)
+![](_screenshots/steam.png)
 
 ## SumatraPDF
-![](_Screenshots/sumatrapdf.png)
+![](_screenshots/sumatrapdf.png)
 
 ## Thunderbird
-![](_Screenshots/thunderbird.png)
+![](_screenshots/thunderbird.png)
 
 ## VSCodium
-![](_Screenshots/vscodium.png)
+![](_screenshots/vscodium.png)
 
 # Configs
 
 ## Mica for Everyone
-![](_Screenshots/micaforeveryone.png)
+![](_screenshots/micaforeveryone.png)
 
 ## StartAllBack
-![](_Screenshots/startallback.png)
+![](_screenshots/startallback.png)
